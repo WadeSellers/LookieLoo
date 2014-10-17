@@ -13,17 +13,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCellId" rowHeight="232" id="dsy-4Z-ASL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCellId" rowHeight="232" id="dsy-4Z-ASL" customClass="PhotoTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsy-4Z-ASL" id="VTi-2L-Ajo">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="dsy-4Z-ASL" id="VTi-2L-Ajo">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-m5-fbv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-m5-fbv">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="231.5"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vFd-m5-fbv" firstAttribute="top" secondItem="VTi-2L-Ajo" secondAttribute="top" constant="-1" id="Jmt-Z2-0M6"/>
+                                        <constraint firstAttribute="bottom" secondItem="vFd-m5-fbv" secondAttribute="bottom" constant="1" id="UOB-s2-gpb"/>
+                                        <constraint firstAttribute="trailing" secondItem="vFd-m5-fbv" secondAttribute="trailing" id="eeg-ib-RAw"/>
+                                        <constraint firstItem="vFd-m5-fbv" firstAttribute="leading" secondItem="VTi-2L-Ajo" secondAttribute="leading" id="gX6-uN-dmi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="vFd-m5-fbv" id="zXJ-da-4wy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

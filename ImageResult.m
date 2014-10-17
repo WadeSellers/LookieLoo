@@ -41,7 +41,11 @@
     return json [@"images"][@"standard_resolution"][@"url"];
 }
 
-
+-(UIImage *)imageFromUrl{
+    NSString *filePath = [NSString stringWithFormat:@"%@",self.standardResolutionUrl];
+    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:filePath]]];
+    return image;
+}
 
 
 

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ImageResult : NSObject
 
@@ -14,6 +15,7 @@
 @property (readonly) NSString *photoLink;
 @property (readonly) NSString *standardResolutionUrl;
 
+@property (nonatomic) UIImage *imageFromUrl;
 
 -(instancetype)initWithJSONData:(NSDictionary *)jsonData;
 

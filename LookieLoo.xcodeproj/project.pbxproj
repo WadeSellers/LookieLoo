@@ -15,6 +15,7 @@
 		169CFB0319F0864000BAC8EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169CFB0119F0864000BAC8EC /* LaunchScreen.xib */; };
 		169CFB0F19F0864000BAC8EC /* LookieLooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB0E19F0864000BAC8EC /* LookieLooTests.m */; };
 		169CFB1D19F0AC3500BAC8EC /* ImageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB1C19F0AC3500BAC8EC /* ImageResult.m */; };
+		169CFB2019F0DB6000BAC8EC /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB1F19F0DB6000BAC8EC /* PhotoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		169CFB0E19F0864000BAC8EC /* LookieLooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookieLooTests.m; sourceTree = "<group>"; };
 		169CFB1B19F0AC3500BAC8EC /* ImageResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResult.h; sourceTree = "<group>"; };
 		169CFB1C19F0AC3500BAC8EC /* ImageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResult.m; sourceTree = "<group>"; };
+		169CFB1E19F0DB6000BAC8EC /* PhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		169CFB1F19F0DB6000BAC8EC /* PhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				169CFAF919F0864000BAC8EC /* RootViewController.h */,
 				169CFAFA19F0864000BAC8EC /* RootViewController.m */,
 				169CFAFC19F0864000BAC8EC /* Main.storyboard */,
+				169CFB1E19F0DB6000BAC8EC /* PhotoTableViewCell.h */,
+				169CFB1F19F0DB6000BAC8EC /* PhotoTableViewCell.m */,
 				169CFAFF19F0864000BAC8EC /* Images.xcassets */,
 				169CFB0119F0864000BAC8EC /* LaunchScreen.xib */,
 				169CFAF219F0864000BAC8EC /* Supporting Files */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169CFB2019F0DB6000BAC8EC /* PhotoTableViewCell.m in Sources */,
 				169CFAFB19F0864000BAC8EC /* RootViewController.m in Sources */,
 				169CFAF819F0864000BAC8EC /* AppDelegate.m in Sources */,
 				169CFB1D19F0AC3500BAC8EC /* ImageResult.m in Sources */,
