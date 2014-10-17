@@ -14,7 +14,7 @@
 		169CFB0019F0864000BAC8EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169CFAFF19F0864000BAC8EC /* Images.xcassets */; };
 		169CFB0319F0864000BAC8EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169CFB0119F0864000BAC8EC /* LaunchScreen.xib */; };
 		169CFB0F19F0864000BAC8EC /* LookieLooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB0E19F0864000BAC8EC /* LookieLooTests.m */; };
-		169CFB1A19F0A57600BAC8EC /* imageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB1919F0A57600BAC8EC /* imageResult.m */; };
+		169CFB1D19F0AC3500BAC8EC /* ImageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB1C19F0AC3500BAC8EC /* ImageResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		169CFB0819F0864000BAC8EC /* LookieLooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookieLooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169CFB0D19F0864000BAC8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169CFB0E19F0864000BAC8EC /* LookieLooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookieLooTests.m; sourceTree = "<group>"; };
-		169CFB1819F0A57600BAC8EC /* imageResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageResult.h; sourceTree = "<group>"; };
-		169CFB1919F0A57600BAC8EC /* imageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageResult.m; sourceTree = "<group>"; };
+		169CFB1B19F0AC3500BAC8EC /* ImageResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResult.h; sourceTree = "<group>"; };
+		169CFB1C19F0AC3500BAC8EC /* ImageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,8 @@
 		169CFAE619F0864000BAC8EC = {
 			isa = PBXGroup;
 			children = (
+				169CFB1B19F0AC3500BAC8EC /* ImageResult.h */,
+				169CFB1C19F0AC3500BAC8EC /* ImageResult.m */,
 				169CFAF119F0864000BAC8EC /* LookieLoo */,
 				169CFB0B19F0864000BAC8EC /* LookieLooTests */,
 				169CFAF019F0864000BAC8EC /* Products */,
@@ -88,8 +90,6 @@
 				169CFAF719F0864000BAC8EC /* AppDelegate.m */,
 				169CFAF919F0864000BAC8EC /* RootViewController.h */,
 				169CFAFA19F0864000BAC8EC /* RootViewController.m */,
-				169CFB1819F0A57600BAC8EC /* imageResult.h */,
-				169CFB1919F0A57600BAC8EC /* imageResult.m */,
 				169CFAFC19F0864000BAC8EC /* Main.storyboard */,
 				169CFAFF19F0864000BAC8EC /* Images.xcassets */,
 				169CFB0119F0864000BAC8EC /* LaunchScreen.xib */,
@@ -226,7 +226,7 @@
 			files = (
 				169CFAFB19F0864000BAC8EC /* RootViewController.m in Sources */,
 				169CFAF819F0864000BAC8EC /* AppDelegate.m in Sources */,
-				169CFB1A19F0A57600BAC8EC /* imageResult.m in Sources */,
+				169CFB1D19F0AC3500BAC8EC /* ImageResult.m in Sources */,
 				169CFAF519F0864000BAC8EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
