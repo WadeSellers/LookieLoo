@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		169CFAF519F0864000BAC8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFAF419F0864000BAC8EC /* main.m */; };
 		169CFAF819F0864000BAC8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFAF719F0864000BAC8EC /* AppDelegate.m */; };
-		169CFAFB19F0864000BAC8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFAFA19F0864000BAC8EC /* ViewController.m */; };
+		169CFAFB19F0864000BAC8EC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFAFA19F0864000BAC8EC /* RootViewController.m */; };
 		169CFAFE19F0864000BAC8EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169CFAFC19F0864000BAC8EC /* Main.storyboard */; };
 		169CFB0019F0864000BAC8EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169CFAFF19F0864000BAC8EC /* Images.xcassets */; };
 		169CFB0319F0864000BAC8EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169CFB0119F0864000BAC8EC /* LaunchScreen.xib */; };
 		169CFB0F19F0864000BAC8EC /* LookieLooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB0E19F0864000BAC8EC /* LookieLooTests.m */; };
+		169CFB1A19F0A57600BAC8EC /* imageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CFB1919F0A57600BAC8EC /* imageResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		169CFAF419F0864000BAC8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		169CFAF619F0864000BAC8EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		169CFAF719F0864000BAC8EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		169CFAF919F0864000BAC8EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		169CFAFA19F0864000BAC8EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		169CFAF919F0864000BAC8EC /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		169CFAFA19F0864000BAC8EC /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		169CFAFD19F0864000BAC8EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		169CFAFF19F0864000BAC8EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		169CFB0219F0864000BAC8EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		169CFB0819F0864000BAC8EC /* LookieLooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookieLooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169CFB0D19F0864000BAC8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169CFB0E19F0864000BAC8EC /* LookieLooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookieLooTests.m; sourceTree = "<group>"; };
+		169CFB1819F0A57600BAC8EC /* imageResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageResult.h; sourceTree = "<group>"; };
+		169CFB1919F0A57600BAC8EC /* imageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,10 @@
 			children = (
 				169CFAF619F0864000BAC8EC /* AppDelegate.h */,
 				169CFAF719F0864000BAC8EC /* AppDelegate.m */,
-				169CFAF919F0864000BAC8EC /* ViewController.h */,
-				169CFAFA19F0864000BAC8EC /* ViewController.m */,
+				169CFAF919F0864000BAC8EC /* RootViewController.h */,
+				169CFAFA19F0864000BAC8EC /* RootViewController.m */,
+				169CFB1819F0A57600BAC8EC /* imageResult.h */,
+				169CFB1919F0A57600BAC8EC /* imageResult.m */,
 				169CFAFC19F0864000BAC8EC /* Main.storyboard */,
 				169CFAFF19F0864000BAC8EC /* Images.xcassets */,
 				169CFB0119F0864000BAC8EC /* LaunchScreen.xib */,
@@ -219,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				169CFAFB19F0864000BAC8EC /* ViewController.m in Sources */,
+				169CFAFB19F0864000BAC8EC /* RootViewController.m in Sources */,
 				169CFAF819F0864000BAC8EC /* AppDelegate.m in Sources */,
+				169CFB1A19F0A57600BAC8EC /* imageResult.m in Sources */,
 				169CFAF519F0864000BAC8EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
