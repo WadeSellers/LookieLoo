@@ -89,13 +89,11 @@
 		169CFAF119F0864000BAC8EC /* LookieLoo */ = {
 			isa = PBXGroup;
 			children = (
-				169CFAF619F0864000BAC8EC /* AppDelegate.h */,
-				169CFAF719F0864000BAC8EC /* AppDelegate.m */,
 				169CFAF919F0864000BAC8EC /* RootViewController.h */,
 				169CFAFA19F0864000BAC8EC /* RootViewController.m */,
-				169CFAFC19F0864000BAC8EC /* Main.storyboard */,
 				169CFB1E19F0DB6000BAC8EC /* PhotoTableViewCell.h */,
 				169CFB1F19F0DB6000BAC8EC /* PhotoTableViewCell.m */,
+				169CFAFC19F0864000BAC8EC /* Main.storyboard */,
 				169CFAFF19F0864000BAC8EC /* Images.xcassets */,
 				169CFB0119F0864000BAC8EC /* LaunchScreen.xib */,
 				169CFAF219F0864000BAC8EC /* Supporting Files */,
@@ -106,6 +104,8 @@
 		169CFAF219F0864000BAC8EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				169CFAF619F0864000BAC8EC /* AppDelegate.h */,
+				169CFAF719F0864000BAC8EC /* AppDelegate.m */,
 				169CFAF319F0864000BAC8EC /* Info.plist */,
 				169CFAF419F0864000BAC8EC /* main.m */,
 			);

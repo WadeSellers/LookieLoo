@@ -24,6 +24,8 @@
     self = [super init];
     if(self){
         json = jsonData;
+        NSString *filePath = [NSString stringWithFormat:@"%@",self.standardResolutionUrl];
+        self.imageFromUrl = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:filePath]]];
 
     }
     return self;
@@ -38,14 +40,10 @@
 }
 
 -(NSString *)standardResolutionUrl{
-    return json [@"images"][@"standard_resolution"][@"url"];
+    return json [@"images"][@"low_resolution"][@"url"];
 }
 
--(UIImage *)imageFromUrl{
-    NSString *filePath = [NSString stringWithFormat:@"%@",self.standardResolutionUrl];
-    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString:filePath]]];
-    return image;
-}
+
 
 
 

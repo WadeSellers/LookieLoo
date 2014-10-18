@@ -20,16 +20,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-m5-fbv">
-                                            <rect key="frame" x="0.0" y="-1" width="600" height="231.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="600" id="piF-Hx-m4d"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vFd-m5-fbv" firstAttribute="top" secondItem="VTi-2L-Ajo" secondAttribute="top" constant="-1" id="Jmt-Z2-0M6"/>
-                                        <constraint firstAttribute="bottom" secondItem="vFd-m5-fbv" secondAttribute="bottom" constant="1" id="UOB-s2-gpb"/>
+                                        <constraint firstItem="vFd-m5-fbv" firstAttribute="top" secondItem="VTi-2L-Ajo" secondAttribute="top" id="Jmt-Z2-0M6"/>
+                                        <constraint firstAttribute="bottom" secondItem="vFd-m5-fbv" secondAttribute="bottom" id="UOB-s2-gpb"/>
                                         <constraint firstAttribute="trailing" secondItem="vFd-m5-fbv" secondAttribute="trailing" id="eeg-ib-RAw"/>
                                         <constraint firstItem="vFd-m5-fbv" firstAttribute="leading" secondItem="VTi-2L-Ajo" secondAttribute="leading" id="gX6-uN-dmi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="photoImageView" destination="vFd-m5-fbv" id="zXJ-da-4wy"/>
                                 </connections>
@@ -58,11 +62,16 @@
                             </attributedString>
                             <textInputTraits key="textInputTraits" keyboardType="twitter" enablesReturnKeyAutomatically="YES"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="search" id="DJF-bU-YHu"/>
+                        <barButtonItem key="rightBarButtonItem" title="SEARCH" style="done" id="DJF-bU-YHu">
+                            <connections>
+                                <action selector="onSearchButtonTapped:" destination="vXZ-lx-hvc" id="CCG-UZ-762"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="rootTableView" destination="aGu-6u-9aV" id="PwC-4k-oPS"/>
+                        <outlet property="searchTextField" destination="oxt-bB-olg" id="agW-YG-fc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

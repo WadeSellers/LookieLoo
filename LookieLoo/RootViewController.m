@@ -14,6 +14,7 @@
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *rootTableView;
 @property NSMutableArray *imageArray;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -22,7 +23,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/tags/wetcat/media/recent?client_id=17456cbb35e542d2813ac6fc3cb7a5b0"];
+
+    [self performSearchAndDisplay:@"YO"];
+
+}
+
+
+#pragma mark - Delegate Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.imageArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ImageResult *image = [self.imageArray objectAtIndex:indexPath.row];
+    PhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCellId" forIndexPath:indexPath];
+    cell.photoImageView.image = image.imageFromUrl;
+    cell.textLabel.text = image.userName;
+    return cell;
+
+}
+
+-(void)performSearchAndDisplay:(NSString *)theSearchUrl
+{
+
+
+    NSString *searchUrl = @"https://api.instagram.com/v1/tags/wetcat/media/recent?client_id=17456cbb35e542d2813ac6fc3cb7a5b0";
+
+    NSURL *url = [NSURL URLWithString:searchUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
@@ -40,25 +70,22 @@
     }];
 }
 
-
-#pragma mark - Delegate Methods
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (IBAction)onSearchButtonTapped:(UIBarButtonItem *)sender
 {
-    return 10;
+    if ([self.searchTextField.text hasPrefix:@"#"])
+    {
+        NSString *usernameSearchUrl = [NSString stringWithFormat:@"https://api.instagram.com/v1/users/search?q=%@&client_id=17456cbb35e542d2813ac6fc3cb7a5b0", self.searchTextField.text];
+        [self performSearchAndDisplay:usernameSearchUrl];
+
+    }
+    else
+    {
+        NSString *tagSearchUrl = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=17456cbb35e542d2813ac6fc3cb7a5b0", self.searchTextField.text];
+        [self performSearchAndDisplay:tagSearchUrl];
+
+    }
+
+
 }
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{   ImageResult *image = [[ImageResult alloc] init];
-
-    image = [self.imageArray objectAtIndex:indexPath.row];
-    NSLog(@"lala %@", [self.imageArray objectAtIndex:indexPath.row]);
-    PhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCellId" forIndexPath:indexPath];
-    cell.photoImageView.image = image.imageFromUrl;
-    NSLog(@"%lu", (unsigned long)self.imageArray.count);
-    return cell;
-
-}
-
 
 @end
